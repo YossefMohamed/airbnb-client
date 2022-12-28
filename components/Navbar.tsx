@@ -4,9 +4,17 @@ import { GrLanguage } from "react-icons/gr";
 import { FaBars, FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
 import DatePicker from "./DatePicker";
+import useOuterClick from "../custom-hooks/useOuterClick";
 const Navbar = () => {
   const [search, setSearch] = useState(false);
   const [datePicker, setDatePicker] = useState(false);
+  const { ref } = useOuterClick((e: boolean) => {
+    if (search) {
+      console.log(search);
+      setSearch(e);
+      console.log(e);
+    }
+  });
 
   return (
     <div className="border-b-2">
@@ -19,6 +27,7 @@ const Navbar = () => {
         {!search ? (
           <div
             onClick={() => setSearch(true)}
+            ref={ref}
             className="search border-2 flex items-center shadow-sm rounded-3xl px-2 py-1 gap-8 text-sm cursor-pointer hover:shadow-md"
           >
             <div className="p-2">AnyWhere</div>
@@ -51,6 +60,7 @@ const Navbar = () => {
       <div className="transition ease-in-out delay-150">
         {search && (
           <div
+            ref={ref}
             className={` bar flex text-sm justify-center mb-8 rounded-full border w-fit m-auto items-center`}
           >
             <div className="location rounded-full hover:bg-slate-50 px-6 py-2">
