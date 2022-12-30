@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="mb-8">
         <Navbar />
       </div>
-      <div className="">
+      <div>
         <Component {...pageProps} />
       </div>
       <div className="mt-20">

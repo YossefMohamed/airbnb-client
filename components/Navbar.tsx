@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <div className="text-2xl text-slate-700 hover:underline">
+            <div className="text-2xl text-slate-700 hover:underline uppercase">
               Search
             </div>
           </>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <GrLanguage />
           </div>
 
-          <div className="profile flex items-center gap-4 text-lg text-slate-600 rounded-full shadow-sm p-3 border">
+          <div className="profile flex items-center gap-4 text-xl text-slate-600 rounded-full shadow-sm p-3 border">
             <FaBars />
 
             <FaUserAlt />

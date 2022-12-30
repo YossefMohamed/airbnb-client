@@ -9,7 +9,7 @@ export const Layout = ({ children }: any) => {
         <title>Get Property</title>
       </Head>
 
-      <div className="p-12">{children}</div>
+      <div className="px-[5%]">{children}</div>
     </>
   );
 };
