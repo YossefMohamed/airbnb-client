@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineBook } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import PropertyCard from "../../components/PropertyCard";
 
@@ -57,8 +57,24 @@ export default function Property() {
           </div>
         </div>
       </div>
-      <div className="details  flex">
-        <div className="flex-1 col-span-2">s</div>
+      <div className="details  flex mt-5 gap-8">
+        <div className="flex-1 col-span-2 property-details">
+          <div className="text-3xl font-bold flex border-b-2 py-5">
+            <div className="flex flex-col gap-2">
+              <div className="user">Posted By Yossef Mohamed</div>
+              <div className="details text-base text-slate-600">
+                2 guests - 1 bedroom - 1 bed
+              </div>
+            </div>
+            <div className="user-pic ml-auto rounded-full overflow-hidden">
+              <img src="/user.png" className="h-[75px]" />
+            </div>
+          </div>
+          <div className="cancellation py-5 flex items-center gap-4">
+            <AiOutlineBook /> Free cancellation for 48 hours.
+          </div>
+        </div>
+
         <div className="h-fit p-4 self-start col-span-1 w-[34%]">
           <PropertyCard />
         </div>

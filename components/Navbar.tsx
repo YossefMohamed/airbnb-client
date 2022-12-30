@@ -57,64 +57,72 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="transition ease-in-out delay-150">
+      <div className="transition ease-in-out delay-150  ">
         {search && (
           <div
             ref={ref}
-            className={` bar flex text-sm justify-center mb-8 rounded-full border w-fit m-auto items-center`}
+            className={` bar flex text-sm justify-center mb-8 rounded-full border w-fit m-auto items-center py-1`}
           >
-            <div className="location rounded-full hover:bg-slate-50 px-6 py-2">
-              <label className="block" htmlFor="location">
-                Location
-              </label>
-              <input
-                type="text"
-                id="location"
-                placeholder="Where are you going?"
-                className="bg-transparent border-none py-1 outline-none"
-              />
+            <div>
+              <div className="location rounded-full hover:bg-slate-50 px-6 py-2 ">
+                <label className="block" htmlFor="location">
+                  Location
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  placeholder="Where are you going?"
+                  className="bg-transparent border-none py-1 outline-none"
+                />
+              </div>
             </div>
-            <div className="check-in rounded-full hover:bg-slate-50 px-6 py-2">
-              <label className="block" htmlFor="date">
-                Check in
-              </label>
-              <input
-                className="bg-transparent border-none py-1 outline-none"
-                type="text"
-                id="type"
-                placeholder="Add dates"
-                onClick={() => setDatePicker(true)}
-              />
-              {datePicker && (
-                <div className="absolute z-10 bg-white border shadow rounded-xl">
-                  <DatePicker setDatePicker={setDatePicker} />
-                </div>
-              )}
+            <div className="border-2 border-y-0">
+              <div className="check-in rounded-full hover:bg-slate-50 px-6 py-2">
+                <label className="block" htmlFor="date">
+                  Check in
+                </label>
+                <input
+                  className="bg-transparent border-none py-1 outline-none"
+                  type="text"
+                  id="type"
+                  placeholder="Add dates"
+                  onClick={() => setDatePicker(true)}
+                />
+                {datePicker && (
+                  <div className="absolute z-10 bg-white border shadow rounded-xl">
+                    <DatePicker setDatePicker={setDatePicker} />
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="check-out rounded-full hover:bg-slate-50 px-6 py-2">
-              <label className="block" htmlFor="type">
-                Type
-              </label>
-              <input
-                className="bg-transparent border-none py-1 outline-none"
-                type="text"
-                id="type"
-                placeholder="Add dates"
-              />
+            <div className="border-r-2">
+              <div className="check-out rounded-full hover:bg-slate-50 px-6 py-2">
+                <label className="block" htmlFor="type">
+                  Type
+                </label>
+                <input
+                  className="bg-transparent border-none py-1 outline-none"
+                  type="text"
+                  id="type"
+                  placeholder="Add dates"
+                />
+              </div>
             </div>
-            <div className="guests rounded-full hover:bg-slate-50 px-6 py-2">
-              <label className="block" htmlFor="range">
-                Guests
-              </label>
-              <input
-                className="bg-transparent border-none py-1 outline-none"
-                type="text"
-                id="range"
-                placeholder="Add guests"
-              />
-              <span>
-                <i className="lni lni-search-alt"></i>
-              </span>
+            <div>
+              <div className="guests rounded-full hover:bg-slate-50 px-6 py-2">
+                <label className="block" htmlFor="range">
+                  Guests
+                </label>
+                <input
+                  className="bg-transparent border-none py-1 outline-none"
+                  type="text"
+                  id="range"
+                  placeholder="Add guests"
+                />
+                <span>
+                  <i className="lni lni-search-alt"></i>
+                </span>
+              </div>
             </div>
             <div className="search-icon p-4 transition-none hover:bg-red-400 rounded-full hover:text-white cursor-pointer text-lg">
               <AiOutlineSearch />
