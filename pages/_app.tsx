@@ -10,10 +10,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="mb-8">
         <Navbar />
       </div>
-      <div>
-        <Component {...pageProps} />
-      </div>
-      <div className="mt-20">
+      <Component {...pageProps} />
+      <div className="">
         <Footer />
       </div>
     </Layout>

@@ -5,8 +5,11 @@ import { FaBars, FaUserAlt } from "react-icons/fa";
 import { useState } from "react";
 import DatePicker from "./DatePicker";
 import useOuterClick from "../custom-hooks/useOuterClick";
+import { useRouter } from "next/router";
+
 const Navbar = () => {
   const [search, setSearch] = useState(false);
+  const router = useRouter();
   const [datePicker, setDatePicker] = useState(false);
   const { ref } = useOuterClick((e: boolean) => {
     if (search) {
@@ -49,7 +52,12 @@ const Navbar = () => {
             <GrLanguage />
           </div>
 
-          <div className="profile flex items-center gap-4 text-xl text-slate-600 rounded-full shadow-sm p-3 border">
+          <div
+            className="profile flex items-center gap-4 text-xl text-slate-600 rounded-full shadow-sm p-3 border cursor-pointer hover:shadow"
+            onClick={() => {
+              router.push("/login");
+            }}
+          >
             <FaBars />
 
             <FaUserAlt />
