@@ -12,3 +12,16 @@ body {
   font-family: "Roboto Condensed";
   font-size: 16px;
 }
+@layer components {
+  .btn-primary {
+    @apply bg-main p-2 px-3 text-white rounded-2xl hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-light p-2 px-3 text-black rounded-2xl hover:shadow-lg;
+  }
+
+  .input-primary {
+    @apply border my-1 py-2 px-3 rounded-2xl w-full;
+  }
+}

@@ -31,11 +31,9 @@ export default function LoginPage() {
             onChange={(ev) => setPassword(ev.target.value)}
             className=" w-full border my-1 py-2 px-3 rounded-2xl"
           />
-          <button className="primary bg-main p-2 w-full text-white rounded-2xl">
-            Login
-          </button>
+          <button className="primary btn-primary">Login</button>
           <div className="text-center py-2 text-gray-500">
-            Don't have an account yet?
+            {"Don't have an account yet?"}
             <Link className="underline text-black mx-1" href={"/register"}>
               Register now
             </Link>

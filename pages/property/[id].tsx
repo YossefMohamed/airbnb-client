@@ -1,12 +1,12 @@
 import React from "react";
 import {
+  AiFillPicture,
   AiFillStar,
   AiOutlineBook,
   AiOutlineHeart,
   AiOutlineUser,
 } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
-import { MdOutlineRateReview } from "react-icons/md";
 
 import PropertyCard from "../../components/PropertyCard";
 import Review from "../../components/Review";
@@ -44,7 +44,10 @@ export default function Property() {
           </div>
         </div>
       </div>
-      <div className="image-grid">
+      <div className="image-grid relative">
+        <button className="absolute bottom-10 right-10 flex items-center gap-2 btn-secondary ">
+          <AiFillPicture /> Show more photos
+        </button>
         <div className=" items-center ">
           <div className="grid grid-cols-2 grid-rows-2 grid-flow-col gap-2  h-[550px] ">
             <div className="w-full row-span-2 col-span-1">
@@ -126,7 +129,7 @@ export default function Property() {
           </div>
         </div>
 
-        <div className="h-fit p-4 self-start col-span-1 w-[34%]">
+        <div className="h-fit p-4 self-start col-span-1 w-[34%] sticky top-10">
           <PropertyCard />
         </div>
       </div>

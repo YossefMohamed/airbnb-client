@@ -7,7 +7,7 @@ interface ICardCategory {
 }
 const CardCategory: FC<ICardCategory> = ({ imgSrc, title, number }) => {
   return (
-    <div className="w-[48%]  b-8 h-[375px] relative flex overflow-hidden rounded-2xl hover:opacity-80 cursor-pointer">
+    <div className="w-[45%]  b-8 h-[375px] relative flex overflow-hidden rounded-2xl hover:opacity-80 cursor-pointer">
       <img
         loading="lazy"
         src={imgSrc}

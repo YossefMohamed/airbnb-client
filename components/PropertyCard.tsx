@@ -58,9 +58,7 @@ function PropertyCard() {
         </div>
       </div>
       <div className="reserve-button">
-        <button className=" text-center bg-red-500 w-full text-white rounded-sm my-6 py-2 hover:shadow-lg">
-          Reserve
-        </button>
+        <button className="btn-primary w-full my-3">Reserve</button>
       </div>
       <div className="flex flex-col gap-3 my-4">
         <div className="calc text-base text-slate-500 flex justify-between ">
