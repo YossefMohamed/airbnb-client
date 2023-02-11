@@ -7,9 +7,10 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="mt-4 grow flex items-center justify-around">
-      <div className="mb-64 w-[450px]">
-        <h1 className="text-4xl text-center mb-4">Register</h1>
+    <div className="mt-4 grow flex items-center justify-center ">
+      <div className="mb-64 w-[450px] p-4 border rounded-lg ">
+        <h1 className="text-4xl text-center mb-4 border-b pb-4">Register</h1>
+
         <form className=" mx-auto gap-1 flex flex-col w-full">
           <input
             type="text"
