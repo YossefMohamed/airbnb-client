@@ -92,11 +92,21 @@ export default function Property() {
             <AiOutlineBook /> Free cancellation for 48 hours.
           </div>
 
-          <div className="description  flex items-center gap-4 border-b-2 py-8">
-            Sit back in a private plunge pool and enjoy an uninterrupted vista
-            of Table Mountain, the city skyline, and the ocean beyond. The views
-            are just as good from inside this chic and modern penthouse, where
-            sunlight pours in through walls of windows.
+          <div className="description  flex   flex-col gap-8 border-b-2 py-8">
+            <div className="flex   flex-col gap-4">
+              <div className=" uppercase font-bold">description :</div>
+              Sit back in a private plunge pool and enjoy an uninterrupted vista
+              of Table Mountain, the city skyline, and the ocean beyond. The
+              views are just as good from inside this chic and modern penthouse,
+              where sunlight pours in through walls of windows.
+            </div>
+            <div className="flex   flex-col gap-4">
+              <div className=" uppercase font-bold">Extra :</div>
+              Sit back in a private plunge pool and enjoy an uninterrupted vista
+              of Table Mountain, the city skyline, and the ocean beyond. The
+              views are just as good from inside this chic and modern penthouse,
+              where sunlight pours in through walls of windows.
+            </div>
           </div>
 
           <div className="location  flex items-center gap-4 border-b-2 py-8">
