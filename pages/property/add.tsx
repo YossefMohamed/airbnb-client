@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PhotosUploader from "../../components/ImageUploader";
+import MapModel from "../../components/MapModel";
 import Perks from "../../components/Perks";
 
 const Add = () => {
@@ -14,6 +15,7 @@ const Add = () => {
   const [maxGuests, setMaxGuests] = useState(1);
   const [price, setPrice] = useState(100);
   const [redirect, setRedirect] = useState(false);
+  const [map, setMap] = useState(false);
 
   function inputDescription(text: string) {
     return <p className="text-gray-500 text-sm">{text}</p>;
@@ -53,7 +55,13 @@ const Add = () => {
           onChange={(ev) => setAddress(ev.target.value)}
           placeholder="address"
           className="input-primary"
+          onFocus={(event) => {
+            setMap(true);
+            event.target.blur();
+          }}
         />
+        {map && <MapModel setMap={setMap} />}
+
         {preInput("Photos", "more = better")}
         <PhotosUploader />
         {preInput("Description", "description of the place")}
