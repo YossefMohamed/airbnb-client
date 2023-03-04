@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { AiOutlineHeart } from "react-icons/ai";
+import Places from "../../components/Places";
 
 export default function AccountNav() {
   const router = useRouter();
@@ -104,6 +107,20 @@ export default function AccountNav() {
         </div>
     </div>
 
+
+<div className="placesContainer flex  justify-center my-8 flex-col gap-2 items-center">
+  
+
+<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
+         <Places />
+            </Link>
+<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
+         <Places />
+            </Link>
+<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
+         <Places />
+            </Link>
+</div>
     </>
    
   );
