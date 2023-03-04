@@ -9,6 +9,7 @@ export default function AccountNav() {
   if (subpage === undefined) {
     subpage = "profile";
   }
+  
 
   const linkClasses = (type: string | null = null) => {
     let classes = "inline-flex gap-1 py-2 px-6 rounded-full";
@@ -21,6 +22,8 @@ export default function AccountNav() {
   };
 
   return (
+    <>
+    
     <nav className="w-full flex justify-center mt-8 gap-2 mb-8">
       <Link
         href={"/profile?pathname=profile"}
@@ -83,5 +86,25 @@ export default function AccountNav() {
         My accommodations
       </Link>
     </nav>
+    
+
+
+    <div>
+
+        <div className="text-center">
+          <Link className="inline-flex gap-1 bg-main text-white py-2 px-6 rounded-full" href={'/account/places/new'}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+              <path fillRule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+            </svg>
+            Add new place
+          </Link>
+        </div>
+        <div className="mt-4">
+          
+        </div>
+    </div>
+
+    </>
+   
   );
 }
