@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineHome } from "react-icons/ai";
+import { CiLocationArrow1 } from "react-icons/ci";
+import { GrLocation, GrLocationPin } from "react-icons/gr";
+import { IoPerson } from "react-icons/io5";
+import { MdNearMe, MdOutlineEmail } from "react-icons/md";
 import Places from "../../components/Places";
 
 export default function AccountNav() {
@@ -107,19 +111,62 @@ export default function AccountNav() {
         </div>
     </div>
 
+ <div className="profile w-1/2 mx-auto bg-gray-100 py-4 ">
+   <div className="cover-image  shadow w-1/2 m-auto flex rounded-xl overflow-hidden">
+   <Image
+src="/apartment.png"
+alt="image"
+layout="responsive"
+width={10}
+height={10}
+objectFit="cover"
+className="flex-1"
+/>
+   </div>
+
+   <div className="profile-details my-4">
+     <div className="name text-2xl font-bold text-center">Yossef Mohamed</div>
+     <div className="places-details flex justify-center gap-4 my-3">
+     <div className="text-lg hover:text-red-500 fill-red-500 flex  items-center gap-1">
+      <AiOutlineHeart /> 15
+</div>
+<div className="text-lg hover:text-red-500 fill-red-500 flex  items-center gap-1">
+      <AiOutlineHome /> 15
+</div>
+
+<div className="text-lg hover:text-red-500 fill-red-500 flex  items-center gap-1">
+      <GrLocation /> Egypt
+</div>
+     </div>
+     <div className="personal-data mt-10 flex flex-col gap-5 w-1/2 m-auto">
+       <div className="email flex items-center text-xl gap-4  ">
+         <MdOutlineEmail />
+         yossefmohamed@gmail.com</div>
+         <div className="email flex items-center text-xl gap-4  ">
+           
+          <IoPerson/> Yossef mohamed
+         </div>
+
+         <div className="location flex items-center text-xl gap-4  ">
+           
+           <GrLocation/> Giza, Cairo , Egypt
+          </div>
+     </div>
+
+     <div className="button-container flex w-1/2 mx-auto my-8 gap-5">
+       <div className=" btn-secondary w-fit px-5">Edit Profile</div>
+       <div className=" btn-primary w-fit px-5">Logout</div>
+     </div>
+   </div>
+ </div>
+
 
 <div className="placesContainer flex  justify-center my-8 flex-col gap-2 items-center">
   
+<Places />
+<Places />
+<Places />
 
-<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
-         <Places />
-            </Link>
-<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
-         <Places />
-            </Link>
-<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
-         <Places />
-            </Link>
 </div>
     </>
    

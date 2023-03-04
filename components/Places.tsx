@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { AiOutlineHeart } from 'react-icons/ai'
 
 function Places() {
   return (
-    <>
+<Link href={'/account/places/'+"place._id"} className="flex cursor-pointer gap-4 bg-gray-100 h-[200px] w-1/2 p-4 rounded-2xl">
         <div className="w-[35%] bg-red-400 h-full flex">
 
 <Image
@@ -35,7 +36,7 @@ className="flex-1"
 
      </div>
  </div>
-    </>
+    </Link>
   )
 }
 

@@ -24,4 +24,7 @@ body {
   .input-primary {
     @apply border my-1 py-2 px-3 rounded-2xl w-full;
   }
+  .title-primary{
+    @apply my-12 text-2xl font-bold uppercase  w-fit
+  }
 }

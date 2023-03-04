@@ -5,33 +5,93 @@ import { MdOutlineBeachAccess, MdOutlineRoomService } from "react-icons/md";
 import { IoFastFoodOutline, IoFlameOutline } from "react-icons/io5";
 import { HiOutlineKey } from "react-icons/hi2";
 import { TbBuildingCastle } from "react-icons/tb";
+import Swiper from "../components/Swiper";
 
 export default function Home() {
   return (
     <main>
-      <div className="flex gap-10 overflow-hidden">
-        <CatCard Icon={MdOutlineBeachAccess} selected={true} />
-        <CatCard Icon={IoFlameOutline} selected={false} />
-        <CatCard Icon={HiOutlineKey} selected={false} />
-        <CatCard Icon={MdOutlineRoomService} selected={false} />
-        <CatCard Icon={TbBuildingCastle} selected={false} />
-        <CatCard Icon={IoFastFoodOutline} selected={false} />
-        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
-        <CatCard Icon={MdOutlineRoomService} selected={false} />
-        <CatCard Icon={TbBuildingCastle} selected={false} />
-        <CatCard Icon={IoFastFoodOutline} selected={false} />
-        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
-        <CatCard Icon={MdOutlineRoomService} selected={false} />
-        <CatCard Icon={TbBuildingCastle} selected={false} />
-        <CatCard Icon={IoFastFoodOutline} selected={false} />
-        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
-        <CatCard Icon={MdOutlineRoomService} selected={false} />
-        <CatCard Icon={TbBuildingCastle} selected={false} />
-        <CatCard Icon={IoFastFoodOutline} selected={false} />
-        <CatCard Icon={MdOutlineBeachAccess} selected={false} />
-      </div>
+     <Swiper perView={15} >
+     <div className="keen-slider__slide">
 
-      <div className="my-12 text-2xl font-bold uppercase  w-fit">
+     <CatCard Icon={MdOutlineBeachAccess} selected={true} />
+     </div>
+     <div className="keen-slider__slide">
+
+        <CatCard Icon={IoFlameOutline} selected={false} />
+</div>
+        <div className="keen-slider__slide">
+
+        <CatCard Icon={HiOutlineKey} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineRoomService} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={TbBuildingCastle} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={IoFastFoodOutline} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineRoomService} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={TbBuildingCastle} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={IoFastFoodOutline} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineRoomService} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={TbBuildingCastle} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={IoFastFoodOutline} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineBeachAccess} selected={false} />{" "}
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineRoomService} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={TbBuildingCastle} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={IoFastFoodOutline} selected={false} />
+</div>
+             <div className="keen-slider__slide">
+
+        <CatCard Icon={MdOutlineBeachAccess} selected={false} />
+        </div>
+     </Swiper>
+
+      
+
+      <div className="title-primary">
         Categories :
       </div>
       <div className="flex justify-between flex-wrap gap-y-10">
