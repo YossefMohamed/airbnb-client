@@ -7,6 +7,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
+import Perks from "../../components/Perks";
 
 import PropertyCard from "../../components/PropertyCard";
 import Review from "../../components/Review";
@@ -100,6 +101,14 @@ export default function Property() {
               views are just as good from inside this chic and modern penthouse,
               where sunlight pours in through walls of windows.
             </div>
+
+            <div className=" uppercase font-bold">Perks :</div>
+            <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+          <Perks property />
+        </div>
+
+
+            
             <div className="flex   flex-col gap-4">
               <div className=" uppercase font-bold">Extra :</div>
               Sit back in a private plunge pool and enjoy an uninterrupted vista

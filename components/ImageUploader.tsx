@@ -1,13 +1,26 @@
 import { useState } from "react";
+import Image from "./ImageComponents";
 
 export default function PhotosUploader({ addedPhotos = [], onChange }: any) {
   const [photoLink, setPhotoLink] = useState("");
-  async function addPhotoByLink(ev: any) {
+  function addPhotoByLink(ev: any) {
     ev.preventDefault();
-
+    photoLink.length && onChange((prev:any) => {
+      return [...prev, photoLink];
+    });
     setPhotoLink("");
   }
 
+  function uploadImageByFileInput(event :React.ChangeEvent<HTMLInputElement>){
+
+    event.target.files && Array.from(event.target.files).forEach(file => { 
+      onChange((prev:any) => {
+        return [...prev, URL.createObjectURL(file)];
+      });
+     });  
+
+     console.log(addedPhotos)
+  }
   return (
     <>
       <div className="flex gap-2">
@@ -28,9 +41,9 @@ export default function PhotosUploader({ addedPhotos = [], onChange }: any) {
         {addedPhotos.length > 0 &&
           addedPhotos.map((link: any) => (
             <div className="h-32 flex relative" key={link}>
-              <img
+              <Image
                 className="rounded-2xl w-full object-cover"
-                src={"http://localhost:4000/uploads/" + link}
+                src={link}
                 alt=""
               />
               <button className="cursor-pointer absolute bottom-1 right-1 text-white bg-black bg-opacity-50 rounded-2xl py-2 px-3">
@@ -84,7 +97,7 @@ export default function PhotosUploader({ addedPhotos = [], onChange }: any) {
             </div>
           ))}
         <label className="h-32 cursor-pointer flex items-center gap-1 justify-center border bg-transparent rounded-2xl p-2 text-2xl text-gray-600">
-          <input type="file" multiple className="hidden" />
+          <input type="file" multiple className="hidden"  onChange={uploadImageByFileInput}/>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

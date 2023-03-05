@@ -62,8 +62,8 @@ const Add = () => {
         />
         {map && <MapModel setMap={setMap} />}
 
-        {preInput("Photos", "more = better")}
-        <PhotosUploader />
+        {preInput('Photos','more = better')}
+        <PhotosUploader addedPhotos={addedPhotos} onChange={setAddedPhotos} />
         {preInput("Description", "description of the place")}
         <textarea
           value={description}
